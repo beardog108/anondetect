@@ -1,0 +1,37 @@
+body
+{
+  background-color: #E4CCAF;
+  font-family: sans-serif;
+}
+table
+{
+  margin-top: 3em;
+  border: 1px black solid;
+}
+td
+{
+  padding: 1em;
+}
+#title, #info, table
+{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.true
+{
+  color: green;
+}
+.false
+{
+  color: red;
+}
+
+#info
+{
+  padding-right: 3em;
+  padding-left: 1em;
+  text-align: justify;
+  border: 1px solid black;
+  margin-top: 1em;
+}

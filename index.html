@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>AnonDetect</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel='stylesheet' href='theme.css'>
+<script src='jquery-3.1.1.min.js'></script>
+</head>
+<body>
+  <h1 id='title'>Decentralized Network Detector</h1>
+  <table>
+    <tr id='result'></tr>
+  </table>
+  <div id='info'><h2>What is this?</h2>
+    <p>
+      AnonDetect is a simple script inspired by a test <a href='https://robinlinus.github.io/socialmedia-leak/'>for social media logins</a>.
+    </p>
+    <p>
+      This script detects if you have Tor, I2P, Freenet, or ZeroNet running on your system, by requesting images from their web interfaces. (Except for Tor, which is <a href='https://www.browserleaks.com/firefox'>leaked through resource:// URIs</a>.)
+    </p>
+    <p>
+      <a href='https://github.com/beardog108/anondetect/'>View on GitHub</a>
+    </p>
+  </div>
+  <noscript>You have JavaScript disabled, therefore, we can't detect any anonymity software.</noscript>
+  <script src='resource:///defaults/preferences/000-tor-browser.js' onload='tor = true;' onerror='tor = false;'></script>
+  <script src='detect.js'></script>
+</body>
+</html>
