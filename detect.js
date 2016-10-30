@@ -28,6 +28,10 @@ window.onload = function(){
         name: "ZeroNet"
       },
       {
+        domain: "7657/i2pbote/themes/material/images/favicon.png",
+        name: "I2P-Bote"
+      },
+      {
         domain: "7657/themes/console/light/images/i2plogo.png",
         name: "I2P"
       }];
