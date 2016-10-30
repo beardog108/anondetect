@@ -36,6 +36,15 @@ td
   margin-top: 1em;
 }
 
-a, u {
+a {
     text-decoration: none;
+}
+a:visited {
+  color: blue;
+}
+
+footer
+{
+  margin-top: 1em;
+  text-align: center;
 }
