@@ -20,6 +20,10 @@ window.onload = function(){
         name: "Freenet"
       },
       {
+        domain: "5001/ipfs/QmU3o9bvfenhTKhxUakbYrLDnZU7HezAVxPM6Ehjw9Xjqy/8f70e85e85c6a23c75c6862292d871c0.png",
+        name: "IPFS"
+      },
+      {
         domain: "43110/1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D/img/logo.png",
         name: "ZeroNet"
       },
