@@ -48,3 +48,9 @@ footer
   margin-top: 1em;
   text-align: center;
 }
+
+#noscript
+{
+  text-align: center;
+  display: block;
+}

@@ -15,6 +15,7 @@
   <table>
     <tr id='result'></tr>
   </table>
+  <noscript><span id='noscript'>You have JavaScript disabled, therefore, no networks can be detected.</span></noscript>
   <div id='info'><h2>What is this?</h2>
     <p>
       AnonDetect is a simple script inspired by a test <a href='https://robinlinus.github.io/socialmedia-leak/'>for social media logins</a>.
@@ -34,7 +35,6 @@
       (Yes, I know ZeroNet & IPFS are not "anonymity" networks, but I still felt that they fit here).
     </p>
   </div>
-  <noscript>You have JavaScript disabled, therefore, we can't detect any anonymity software.</noscript>
   <script src='resource:///defaults/preferences/000-tor-browser.js' onload='tor = true;' onerror='tor = false;'></script>
   <script src='detect.js'></script>
   <footer>
