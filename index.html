@@ -21,7 +21,7 @@
       AnonDetect is a simple script inspired by a test <a href='https://robinlinus.github.io/socialmedia-leak/'>for social media logins</a>.
     </p>
     <p>
-      This script detects if you have Tor, I2P, I2P-Bote, Freenet, IPFS, or ZeroNet running on your system, by requesting images from their web interfaces. (Except for Tor Browser, which is <a href='https://www.browserleaks.com/firefox'>leaked through resource:// URIs</a>.)
+      This script detects if you have Tor, I2P, I2P-Bote, Freenet, IPFS, or ZeroNet running on your system, by requesting images from their web interfaces. (Tor Browser is also <a href='https://www.browserleaks.com/firefox'>leaked through resource:// URIs</a>.)
     </p>
     <p>This uses no server side code.</p>
     <p>If you are using the Tor Browser Bundle, you are protected from this because localhost connections are blocked.</p>
@@ -31,6 +31,9 @@
     <p>
       <b>Note</b>: Tor/Tor Browser can only be detected if you are using Firefox. If anyone has a work around for this, please let me know.
     <p>
+    <p>
+      <b>Note #2</b>: Firefox <a href='https://support.mozilla.org/en-US/kb/mixed-content-blocking-firefox'>blocks some active mixed content</a> used by this project when the parent page (this page) is on a secure (https) website.
+    </p>
       <a href='https://github.com/beardog108/anondetect/'>View on GitHub</a>
     </p>
     <p>
