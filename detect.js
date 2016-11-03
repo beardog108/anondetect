@@ -1,9 +1,11 @@
+document.getElementById('torStandalone').style.display = 'block';
 window.onload = function(){
+
   var lh = 'http://127.0.0.1:';
   var platforms;
   var none = true;
 
-  if (tor == true)
+  if (torBrowser == true)
   {
     none = false;
     $('#result').append('<td>Tor Browser: <span class="true">true</span></td>');

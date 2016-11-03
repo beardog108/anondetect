@@ -13,7 +13,7 @@
 <body>
   <h1 id='title'>Anonymity Network Detector</h1>
   <table>
-    <tr id='result'></tr>
+    <tr id='result'><td id='torStandalone'>Tor Standalone: <span class="false">false</span></td></tr>
   </table>
   <noscript><span id='noscript'>You have JavaScript disabled, therefore, no networks can be detected.</span></noscript>
   <div id='info'><h2>What is this?</h2>
@@ -21,13 +21,15 @@
       AnonDetect is a simple script inspired by a test <a href='https://robinlinus.github.io/socialmedia-leak/'>for social media logins</a>.
     </p>
     <p>
-      This script detects if you have Tor, I2P, Freenet, IPFS, or ZeroNet running on your system, by requesting images from their web interfaces. (Except for Tor Browser, which is <a href='https://www.browserleaks.com/firefox'>leaked through resource:// URIs</a>.)
+      This script detects if you have Tor, I2P, I2P-Bote, Freenet, IPFS, or ZeroNet running on your system, by requesting images from their web interfaces. (Except for Tor Browser, which is <a href='https://www.browserleaks.com/firefox'>leaked through resource:// URIs</a>.)
     </p>
     <p>This uses no server side code.</p>
     <p>If you are using the Tor Browser Bundle, you are protected from this because localhost connections are blocked.</p>
     <p>
-      Identifying localhost/LAN web services using techniques similar to this is one of many ways websites can uniquely identify you, even when you are using a VPN service.
+      Identifying localhost/LAN web services using techniques similar to this is one of many ways websites can fingerprint you, even when you are using a VPN service.
     </p>
+    <p>
+      <b>Note</b>: Tor/Tor Browser can only be detected if you are using Firefox. If anyone has a work around for this, please let me know.
     <p>
       <a href='https://github.com/beardog108/anondetect/'>View on GitHub</a>
     </p>
@@ -35,8 +37,11 @@
       (Yes, I know ZeroNet & IPFS are not "anonymity" networks, but I still felt that they fit here).
     </p>
   </div>
-  <script src='resource:///defaults/preferences/000-tor-browser.js' onload='tor = true;' onerror='tor = false;'></script>
+  <script src='resource:///defaults/preferences/000-tor-browser.js' onload='torBrowser = true;' onerror='torBrowser = false;'></script>
   <script src='detect.js'></script>
+  <iframe class='detectTor' src='http://127.0.0.1:9050/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torStandalone").style.display = "none"; $("#result").append("<td>Tor Standalone: <span class=\"true\">true</span></td>"); } else{ $("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>"); }' onerror='$("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>");'></iframe>
+  <iframe class='detectTor' src='http://127.0.0.1:9150/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { $("#result").append("<td>Tor Browser: <span class=\"true\">true</span></td>"); }' onerror='$("#result").append("<td>Tor Browser: <span class=\"false\">false</span></td>");'></iframe>
+
   <footer>
     Copyright 2016 © Kevin Froman <a href='https://opensource.org/licenses/MIT'>MIT License</a> | <a href='https://chaoswebs.net/?page=donate'>Tip me some money</a>
   </footer>
