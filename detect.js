@@ -1,3 +1,4 @@
+/* This code is terrible. It will melt your brain. I'm sorry. */
 window.onload = function(){
 
   var lh = 'http://127.0.0.1:';
@@ -7,10 +8,12 @@ window.onload = function(){
   if (torBrowser == true)
   {
     none = false;
-    document.getElementById("torBrowser").style.display = "block";
+    document.getElementById("torBrowser").innerHTML = "true";
+    document.getElementById("torBrowser").style.color = "green";
   }
   else {
-    document.getElementById("torBrowser").style.display = "none";
+    document.getElementById("torBrowser").innerHTML = "false";
+    document.getElementById("torBrowser").style.color = "red";
   }
 
   var img = document.createElement('img');

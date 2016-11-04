@@ -59,6 +59,6 @@ footer
   display: none;
 }
 
-#torStandalone {
+#torStandalone, #torBrowser {
   display: none;
 }
