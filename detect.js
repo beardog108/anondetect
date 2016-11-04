@@ -1,4 +1,3 @@
-document.getElementById('torStandalone').style.display = 'block';
 window.onload = function(){
 
   var lh = 'http://127.0.0.1:';
@@ -8,10 +7,10 @@ window.onload = function(){
   if (torBrowser == true)
   {
     none = false;
-    $('#result').append('<td>Tor Browser: <span class="true">true</span></td>');
+    document.getElementById("torBrowser").style.display = "block";
   }
   else {
-    $('#result').append('<td>Tor Browser: <span class="false">false</span></td>');
+    document.getElementById("torBrowser").style.display = "none";
   }
 
   var img = document.createElement('img');
