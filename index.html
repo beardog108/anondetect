@@ -35,6 +35,10 @@
     <p>
       <b>Note #2</b>: Firefox <a href='https://support.mozilla.org/en-US/kb/mixed-content-blocking-firefox'>blocks some active mixed content</a> used by this project when the parent page (this page) is on a secure (https) website.
     </p>
+    <p>
+      <b>Note #3</b>: Tor Browser Hardened/experimental are protected against resource:// leaks.
+    </p>
+    <p>
       <a href='https://github.com/beardog108/anondetect/'>View on GitHub</a>
     </p>
     <p>
@@ -44,7 +48,7 @@
   <script src='resource:///defaults/preferences/000-tor-browser.js' onload='torBrowser = true;' onerror='torBrowser = false;'></script>
   <script src='detect.js'></script>
   <iframe class='detectTor' src='http://127.0.0.1:9050/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torStandalone").style.display = "none"; $("#result").append("<td>Tor Standalone: <span class=\"true\">true</span></td>"); } else{ $("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>"); }' onerror='$("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>"); document.getElementById("torStandalone").style.display = "none";'></iframe>
-  <iframe class='detectTor' src='http://127.0.0.1:9150/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torBrowser").innerHTML = "true"; document.getElementById("torBrowser").style.color = "green"; }' onerror='document.getElementById("torBrowser").innerHTML = "false"; document.getElementById("torBrowser").style.color = "red";'></iframe>
+  <iframe class='detectTor' src='http://127.0.0.1:9150/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torBrowser").innerHTML = "true"; document.getElementById("torBrowser").style.color = "green"; }' onerror='if (torBrowser == false) {document.getElementById("torBrowser").innerHTML = "false"; document.getElementById("torBrowser").style.color = "red"; } '></iframe>
 
   <footer>
     Copyright 2016 © Kevin Froman <a href='https://opensource.org/licenses/MIT'>MIT License</a> | <a href='https://chaoswebs.net/?page=donate'>Tip me some money</a>
