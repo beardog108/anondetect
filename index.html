@@ -14,7 +14,7 @@
   <h1 id='title'>Anonymity Network Detector</h1>
   <table>
     <tr id='result'><td id='torStandalone'>Tor Standalone: <span class="false">false</span></td>
-    <td id='torBrowser'>Tor Browser: <span class="false">false</span></td></tr>
+    <td>Tor Browser: <span class="false" id='torBrowser'>false</span></td></tr>
   </table>
   <noscript><span id='noscript'>You have JavaScript disabled, therefore, no networks can be detected.</span></noscript>
   <div id='info'><h2>What is this?</h2>
@@ -44,7 +44,7 @@
   <script src='resource:///defaults/preferences/000-tor-browser.js' onload='torBrowser = true;' onerror='torBrowser = false;'></script>
   <script src='detect.js'></script>
   <iframe class='detectTor' src='http://127.0.0.1:9050/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torStandalone").style.display = "none"; $("#result").append("<td>Tor Standalone: <span class=\"true\">true</span></td>"); } else{ $("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>"); }' onerror='$("#result").append("<td>Tor Standalone: <span class=\"false\">false</span></td>"); document.getElementById("torStandalone").style.display = "none";'></iframe>
-  <iframe class='detectTor' src='http://127.0.0.1:9150/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { $("#result").append("<td>Tor Browser: <span class=\"true\">true</span></td>"); }' onerror='$("#result").append("<td>Tor Browser: <span class=\"false\">false</span></td>"); document.getElementById("torBrowser").style.display = "none";'></iframe>
+  <iframe class='detectTor' src='http://127.0.0.1:9150/' onload='if(navigator.userAgent.indexOf("Firefox") != -1 ) { document.getElementById("torBrowser").innerHTML = "true"; document.getElementById("torBrowser").style.color = "green"; }' onerror='document.getElementById("torBrowser").innerHTML = "false"; document.getElementById("torBrowser").style.color = "red";'></iframe>
 
   <footer>
     Copyright 2016 © Kevin Froman <a href='https://opensource.org/licenses/MIT'>MIT License</a> | <a href='https://chaoswebs.net/?page=donate'>Tip me some money</a>
