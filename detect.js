@@ -5,17 +5,6 @@ window.onload = function(){
   var platforms;
   var none = true;
 
-  if (torBrowser == true)
-  {
-    none = false;
-    document.getElementById("torBrowser").innerHTML = "true";
-    document.getElementById("torBrowser").style.color = "green";
-  }
-  else {
-    document.getElementById("torBrowser").innerHTML = "false";
-    document.getElementById("torBrowser").style.color = "red";
-  }
-
   var img = document.createElement('img');
 
 
