@@ -21,6 +21,10 @@ window.onload = function(){
         name: "ZeroNet"
       },
       {
+          domain: "40902/image/start.jpg",
+          name: "Perfect Dark"
+      },
+      {
         domain: "7657/i2pbote/themes/material/images/favicon.png",
         name: "I2P-Bote"
       },
